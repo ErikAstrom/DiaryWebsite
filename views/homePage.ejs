@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="style/main.css">
+
+<% if (!locals.user) { %>
+        <h2> Welcome to Daytell!</h2>
+        <% } %>
+<% if (locals.user) { %>
+            <h1>Welcome <%=user.name%></h1>
+                   <% } %>
+
+        <%- include("./navbar.ejs") %>
+
+
+        <% if (!locals.user) { %>
+
+            <h2>Daytell</h2>
+            <h3>Your online personal diary</h3>
+            <p>
+            Daytell is a free online diary service where you can safely keep your personal diaries in your account.
+            </p>
+            <p>Entries can also be made public, so you can anonymously share your thoughts and stories with people from around the world</p>
+
+            <a href="/register"><p>Join daytell today!</p></a>
+
+        <% } %>

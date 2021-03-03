@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="style/main.css">
+
+<h2>Welcome</h2>
+
+<p> <%=user.name%>s page</p>
+
+<%- include("./navbar.ejs") %>
+
+
+
+</br>
+<h3>Your posts</h3>
+<% if (user.userEntries[0]) {%>
+    
+    <% for(let i=0; i<user.userEntries.length; i++) { %>
+
+        <p>  <b><%= user.userEntries[i].entryHeader %></b>
+        </br> 
+            <%=user.userEntries[i].entryBody %>
+    </br>
+            <%=user.userEntries[i].date %> </p>
+       <% } %> 
+
+
+    <% } %>
+
+    <h3>Your liked posts</h3>
+<% if (user.likedEntries[0]) {%>
+    
+    <% for(let i=0; i<user.likedEntries.length; i++) { %>
+
+        <p>  <b><%= user.likedEntries[i].entryHeader %></b>
+        </br> 
+            <%=user.likedEntries[i].entryBody %>
+    </br>
+            <%=user.likedEntries[i].date %> </p>
+       <% } %> 
+
+
+    <% } %>
+

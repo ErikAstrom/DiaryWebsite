@@ -1,0 +1,57 @@
+
+html {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
+
+body {
+
+    background: url("/images/backgroundImage.jpg");
+    background-position:center ;
+    background-size: cover;
+    background-repeat:no-repeat;
+    font-family: monospace;
+    font-size: larger;
+}
+
+input {
+    height:50px;
+    font-size: larger;
+    border-radius: 10px;
+}
+button {
+    height:55px;
+    border-radius: 10px;
+    background-color: rgba(255, 155,125, 0.5);
+    font-size: larger;
+}
+
+#homeNav {
+
+    display:flex;
+    flex-direction: row;
+    border-bottom:10px double black;
+    width:800px;
+    justify-content: space-between;
+    font-size: xx-large;
+    
+}
+#homeNav > a {
+    color:rgb(79, 105, 27);
+    border:1px solid rgb(235, 214, 160);
+    border-radius:25px;
+    padding:10px;
+    background-color: rgba(55, 150,0, 0.1);
+    text-decoration: none;
+}
+
+
+#entryBody {
+
+    min-width: 40%;
+    min-height: 600px;
+    background-color:rgba(248, 236, 168, 0.2);
+    
+}

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="style/main.css">
+
+<nav id="homeNav">
+    <% if (!locals.user) { %>
+
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+
+        <% } %>
+        
+    <% if (locals.user) { %>
+            <a href="/">Home</a>
+            <a href="/myPage"> user page</a>
+            <% if (locals.user.role == "writer") { %>
+            <a href="/write">New entry</a>
+                <% } %>
+            <a href="/feed"> Feed </a>
+            <a href="/logout"> Log out </a>
+               
+               <% } %>
+
+
+        </nav>
+
+

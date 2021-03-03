@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="style/main.css">
+
+<% if (locals.msg) { %>
+
+<%=msg%>
+
+<% } %>
+
+
+<div id="loginDiv">
+    <form action="/login" method="post">
+    
+    <input type="text" name="name" id="" placeholder="Username or email">
+    <input type="password" name="password" id="" placeholder="Password">
+    
+    <button type="submit"> Login </button>
+    
+    </form>
+    </div>
+
+    <span>Don't have an account yet? Register </span> <a href="/register">Here </a>
+
