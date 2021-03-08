@@ -1,41 +1,52 @@
-<link rel="stylesheet" href="style/main.css">
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script src="https://use.fontawesome.com/ee6bf2d262.js"></script>
+  </head>
+<%- include("./logo.ejs") %>
 
-<h2>Welcome</h2>
-
-<p> <%=user.name%>s page</p>
 
 <%- include("./navbar.ejs") %>
 
+<h2> <%=user.name%>s page</h2>
+<% if (user.userEntries[0]) { %>
+<p> Entries posted so far <%=user.userEntries.length%></p>
+<% } %>
+<p>Member since <%=user.memberSince%> </p>
 
+<div class="postContainer">
 
-</br>
 <h3>Your posts</h3>
 <% if (user.userEntries[0]) {%>
-    
+ 
     <% for(let i=0; i<user.userEntries.length; i++) { %>
+<div class="entryDiv">
+        <span class="entryHead"><%= user.userEntries[i].entryHeader %></span>
+    
+        <span class ="postBody"> <%=user.userEntries[i].entryBody %> </span> 
 
-        <p>  <b><%= user.userEntries[i].entryHeader %></b>
-        </br> 
-            <%=user.userEntries[i].entryBody %>
-    </br>
-            <%=user.userEntries[i].date %> </p>
+            <a href="/myPage/<%=user.userEntries[i].id%>"> <i class="fa fa-trash" aria-hidden="true"></i></a>
+        </div>
        <% } %> 
 
-
+    
     <% } %>
+</div>
 
+<div class="postContainer">
     <h3>Your liked posts</h3>
 <% if (user.likedEntries[0]) {%>
-    
-    <% for(let i=0; i<user.likedEntries.length; i++) { %>
 
-        <p>  <b><%= user.likedEntries[i].entryHeader %></b>
-        </br> 
-            <%=user.likedEntries[i].entryBody %>
-    </br>
-            <%=user.likedEntries[i].date %> </p>
+    <% for(let i=0; i<user.likedEntries.length; i++) { %>
+        <div class="entryDiv">
+<span class="entryHead">  <%= user.likedEntries[i].entryHeader %> </span>
+
+<span class="postBody"> <%=user.likedEntries[i].entryBody %> </span>
+
+<a href="/dislike/<%=user.likedEntries[i].id%>"<i class="fa fa-heart" aria-hidden="true"></i></a>
+</div>
        <% } %> 
 
 
     <% } %>
-
+</div>

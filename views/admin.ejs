@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<%- include("./navbar.ejs") %>
+<%- include("./logo.ejs") %>
+
+
+<h1>ADMIN PAGE</h1>
+<% if (locals.msg) { %>
+
+    <p><%=msg%></p>
+
+<% } %>
+
+<a href="/clearEntries"> Clear all entries </a>
+</br>
+</br>
+
+
+<form action="/admin" method="post">
+
+<input type="text" name="name" id="" placeholder="user to remove..">
+
+<button type="submit">Delete user</button>
+
+
+
+</form>

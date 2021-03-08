@@ -2,56 +2,160 @@
 html {
     min-height: 100%;
     min-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-
-
 
 body {
 
-    background: url("/images/backgroundImage.jpg");
+    background: url("/images/flowerbookbg.png");
     background-position:center ;
     background-size: cover;
     background-repeat:no-repeat;
     font-family: monospace;
-    font-size: larger;
+    min-height: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-input {
-    height:50px;
-    font-size: larger;
-    border-radius: 10px;
-}
-button {
-    height:55px;
-    border-radius: 10px;
-    background-color: rgba(255, 155,125, 0.5);
-    font-size: larger;
-}
+
+
+
 
 #homeNav {
 
     display:flex;
     flex-direction: row;
     border-bottom:10px double black;
-    width:800px;
-    justify-content: space-between;
-    font-size: xx-large;
-    
+    width:100%;
+    height:12%;
+    justify-content: space-around;
+
 }
-#homeNav > a {
-    color:rgb(79, 105, 27);
-    border:1px solid rgb(235, 214, 160);
-    border-radius:25px;
-    padding:10px;
-    background-color: rgba(55, 150,0, 0.1);
+
+a {
     text-decoration: none;
+    color:black;
 }
 
 
 #entryBody {
 
-    min-width: 40%;
-    min-height: 600px;
+    min-width: 80%;
+    min-height: 40%;
     background-color:rgba(248, 236, 168, 0.2);
     
 }
+
+#homeNav > a {
+    display:inline-block;
+    width:20%;
+    height:90%;
+     
+}
+.navImg, #daytellLogo {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:100px;
+    height:100px;
+}
+
+
+#entryImg {
+    background-image: url("../images/entryIcon.png")
+}
+#userImg {
+    background-image: url("../images/profileIcon.png")
+}
+#homeImg {
+    background-image: url("../images/homeIcon.png");
+
+}
+#daytellLogo {
+
+    position: fixed;
+    bottom: 0;
+    left: calc(90% - 100px);
+    z-index: 10;
+    width:100px;
+    height:120px;
+    background-image: url("../images/DAYTELLLOGO.png")
+}
+
+
+
+    .homeContainer {
+        align-items: center;
+        display:flex;
+        margin:0 auto;
+        margin-top:50px;
+        width:90%;
+        min-height:500px;
+        flex-direction:column;
+        border-radius: 5%;
+        background-color: rgba(255, 255, 255, 0.4);
+
+    }
+    .sortTag {
+        display:block;
+        text-align: center;
+    }
+    .radioTag {
+        display:block;
+    
+    }
+    .entryContainer {
+        text-align: center;
+        margin:10px;
+        max-width:80%;
+        word-wrap: break-word;
+        max-height:100px;
+        overflow-y: scroll;
+        font-size: large;
+    }
+    .entryHead {
+        display: block;
+        font-weight: 800;
+    }
+    .entryDiv {
+        max-height:100px;
+        overflow-y: scroll;
+        word-wrap: break-word;
+        margin:10px;
+    }
+    .postContainer {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 5%;
+        min-height:300px;
+        max-height: 500px;
+        width:90%;
+        margin:0 auto;
+    }
+    .postContainer > h3 {
+        text-align: center;
+    }
+    .writeDiv > h2 {
+        text-align: center;
+    }
+    .writeDiv {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 5%;
+        width:90%;
+        margin:0 auto;
+
+    }
+input {
+        height:30px;
+        border-radius: 5%;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    button {
+        height:55px;
+        border-radius: 10px;
+        background-color: rgba(255, 155,125, 0.5);
+        font-size: larger;
+    }
+ 

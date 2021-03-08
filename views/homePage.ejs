@@ -1,13 +1,37 @@
-<link rel="stylesheet" href="style/main.css">
+<head>
+  <link rel="stylesheet" href="style/main.css">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <script src="https://use.fontawesome.com/ee6bf2d262.js"></script>
+</head>
+
+
+
+<%- include("./navbar.ejs") %>
+<%- include("./logo.ejs") %>
+<div class="homeContainer">
 
 <% if (!locals.user) { %>
         <h2> Welcome to Daytell!</h2>
         <% } %>
 <% if (locals.user) { %>
-            <h1>Welcome <%=user.name%></h1>
-                   <% } %>
 
-        <%- include("./navbar.ejs") %>
+            <h2>Entry Feed </h2>
+
+            
+
+               <% for(let i=0; i<data.length; i++) { %>
+                <div class="entryContainer">
+                <span class="entryHead"> <%= data[i].entryHeader %> </span>
+
+                  <span class ="entryBody">  <%=data[i].entryBody %> </span>
+                   <a href="feed/<%=data[i].id%>"> <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  </div>
+               <% } %> 
+              
+            
+ 
+
+
 
 
         <% if (!locals.user) { %>
@@ -22,3 +46,18 @@
             <a href="/register"><p>Join daytell today!</p></a>
 
         <% } %>
+
+
+</div>
+<span class="sortTag"> <a href="/?page=<%=(displayedEntries/entriesPerPage)%>&&sort=-1"> sort oldest</a></span>
+<span class="sortTag"><a href="/?page=<%=(displayedEntries/entriesPerPage)%>&&sort=+1"> sort newest</a></span>
+<% if(entryCalc !== displayedEntries/entriesPerPage) { %>
+            
+  <span class="sortTag"> <a href="/?page=<%=(displayedEntries/entriesPerPage) +1%>"> Show more </a> </span>
+<% } else {   %>
+
+  <span class="sortTag"><a href="/?page=1%>"> Show less </a></span>
+  
+
+<% } %>
+     <% } %>

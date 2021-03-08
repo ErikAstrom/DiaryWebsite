@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="style/main.css">
 
 <nav id="homeNav">
+    
     <% if (!locals.user) { %>
 
         <a href="/login">Login</a>
@@ -9,17 +10,21 @@
         <% } %>
         
     <% if (locals.user) { %>
-            <a href="/">Home</a>
-            <a href="/myPage"> user page</a>
+        <a href="/"><div class="navImg" id="homeImg"></div> </a>
+           <a href="/myPage"> <div class="navImg" id="userImg"></div> </a>
             <% if (locals.user.role == "writer") { %>
-            <a href="/write">New entry</a>
+                <a href="/write">  <div class="navImg" id="entryImg"></div> </a>
                 <% } %>
-            <a href="/feed"> Feed </a>
-            <a href="/logout"> Log out </a>
+                <% if (locals.user.role == "admin") { %>
+                    <a href="/admin"> ADMIN PAGE </a>
+                    <% } %>
+                   
+            <div><h3><%=user.name%></h3><a href="/logout"> <h3>logout</h3> </a></div>
                
                <% } %>
-
-
         </nav>
+
+
+
 
 

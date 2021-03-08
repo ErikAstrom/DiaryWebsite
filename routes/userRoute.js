@@ -24,6 +24,6 @@ router.post("/reset", resetSubmit)
 router.get("/reset/:token", resetParams)
 router.post("/resetForm", resetFormSubmit)
 
-router.get("/myPage", verifyToken, renderMyPage  )
+router.get("/myPage", verifyToken, renderMyPage)
 
 module.exports = router;

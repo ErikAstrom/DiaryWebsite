@@ -42,7 +42,7 @@ const resetSubmit = async (req, res) => {
   res.render("login.ejs", { msg: "Kolla din email och följ instruktionerna" });
 };
 const resetParams = async (req, res) => {
-  // req.params
+
 
   const token = req.params.token;
 
@@ -67,15 +67,13 @@ const resetFormSubmit = async (req, res) => {
   const salt = await bcrypt.genSalt(12);
   const hashedPassword = await bcrypt.hash(password, salt);
 
-  //vilken användare ska ha den nya lösenordet
+
   const user = await User.findOne({ email: email });
 
   user.password = hashedPassword;
   await user.save();
   res.redirect("/login");
 
-  // verifera om mejl adressen finns
-  //
 };
 
 module.exports = {

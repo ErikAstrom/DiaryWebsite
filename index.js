@@ -7,7 +7,7 @@ require("dotenv").config();
 const userRouter = require("./routes/userRoute");
 const homeRouter = require("./routes/homeRoute");
 const entryRouter = require("./routes/entryRoute");
-const feedRouter = require("./routes/feedRoute");
+const adminRouter = require("./routes/adminRoute");
 
 
 app.use(cookieParser())
@@ -20,7 +20,7 @@ app.set("view engine", "ejs")
 app.use(userRouter);
 app.use(homeRouter);
 app.use(entryRouter);
-app.use(feedRouter);
+app.use(adminRouter);
 
 
 mongoose.connect(process.env.DB_CONNECTION,

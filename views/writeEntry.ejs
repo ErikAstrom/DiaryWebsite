@@ -1,20 +1,35 @@
-<link rel="stylesheet" href="style/main.css">
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script src="https://use.fontawesome.com/ee6bf2d262.js"></script>
+  </head>
+  <%- include("./logo.ejs") %>
+<%- include("./navbar.ejs") %>
 
 
-<h3>write entry place</h3>
 
+<div class="writeDiv">
+<h2> Fill in the form to create a diary entry </h2>
 <form action="/write" method="post">
 
 <input type="text" name="header" id="" placeholder="Entry header">
-</br>
 
-<input id="entryBody" type="text" name="body" id="" placeholder="Dear diary ....">
 
-</br>
+<textarea id="entryBody" type="text" name="body" id=""> Dear diary ... </textarea>
 
-<span> Make post public </span><input type="radio" name="radio" id="">
+
+<p>Make this post</p>
+<span class="radioTag">
+<input type="radio" name="radio" id="" value="false">
+<label for="False">  <span> <b> Private </b>(For your eyes only) </span></label>
+</span>
+<span class="radioTag">
+<input type="radio" name="radio" id="" value="true">
+<label for="True"><b>Public</b>(Anonymously share with other Daytellers) </label>
+</span>
 <button type="submit">Submit entry</button>
 
 
 
 </form>
+</div>
