@@ -12,7 +12,7 @@
 <h2> Fill in the form to create a diary entry </h2>
 <form action="/write" method="post">
 
-<input type="text" name="header" id="" placeholder="Entry header">
+<input id="headerInput" type="text" name="header" id="" placeholder="Entry header">
 
 
 <textarea id="entryBody" type="text" name="body" id=""> Dear diary ... </textarea>
@@ -21,11 +21,12 @@
 <p>Make this post</p>
 <span class="radioTag">
 <input type="radio" name="radio" id="" value="false">
-<label for="False">  <span> <b> Private </b>(For your eyes only) </span></label>
+<b> Private</b>(For your eyes only)
 </span>
+
 <span class="radioTag">
 <input type="radio" name="radio" id="" value="true">
-<label for="True"><b>Public</b>(Anonymously share with other Daytellers) </label>
+<b>Public</b>(Anonymously share with other Daytellers) 
 </span>
 <button type="submit">Submit entry</button>
 

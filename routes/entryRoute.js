@@ -15,6 +15,6 @@ router.get("/feed/:id", verifyUser, likeEntry)
 
 router.get("/myPage/:id", verifyUser, removeEntry)
 
-router.get("/dislike/:id", verifyUser, unLikeEntry)
+router.get("/dislike/:id", verifyUser, unLikeEntry) 
 
 module.exports = router;

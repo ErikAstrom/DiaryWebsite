@@ -40,13 +40,7 @@ a {
 }
 
 
-#entryBody {
 
-    min-width: 80%;
-    min-height: 40%;
-    background-color:rgba(248, 236, 168, 0.2);
-    
-}
 
 #homeNav > a {
     display:inline-block;
@@ -145,8 +139,15 @@ a {
         border-radius: 5%;
         width:90%;
         margin:0 auto;
-
+        display:flex;
+        min-height:500px;
+        flex-direction: column;
+        align-items: center;
     }
+        .writeDiv input {
+            background-color:rgba(248, 236, 168, 0.2);
+        }
+
 input {
         height:30px;
         border-radius: 5%;
@@ -159,3 +160,28 @@ input {
         font-size: larger;
     }
  
+.landingDiv {
+    font-size: x-large;
+
+}
+.writeDiv form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.writeDiv span {
+    display:block;
+    width:100%;
+
+
+}
+#entryBody {
+
+    min-width: 80%;
+    min-height: 300px;
+    background-color:rgba(248, 236, 168, 0.2);
+}
+#headerInput {
+    width:80%;
+}

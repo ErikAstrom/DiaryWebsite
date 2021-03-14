@@ -11,7 +11,16 @@
 <div class="homeContainer">
 
 <% if (!locals.user) { %>
+  <div class="landingDiv">
         <h2> Welcome to Daytell!</h2>
+        <h3>Your online personal diary</h3>
+        <p>
+        Daytell is a free online diary service where you can safely keep your personal diaries in your account.
+        </p>
+        <p>Entries can also be made public, so you can anonymously share your thoughts and stories with people from around the world</p>
+
+        <a href="/register"><p>Join daytell today!</p></a>
+      </div>
         <% } %>
 <% if (locals.user) { %>
 
@@ -34,18 +43,6 @@
 
 
 
-        <% if (!locals.user) { %>
-
-            <h2>Daytell</h2>
-            <h3>Your online personal diary</h3>
-            <p>
-            Daytell is a free online diary service where you can safely keep your personal diaries in your account.
-            </p>
-            <p>Entries can also be made public, so you can anonymously share your thoughts and stories with people from around the world</p>
-
-            <a href="/register"><p>Join daytell today!</p></a>
-
-        <% } %>
 
 
 </div>
