@@ -3,6 +3,7 @@
 An online diary that saves entries on mongodb. 
 The user can choose to publish diary entries for others to view, or to keep them private.
 
+> This project was created with ejs, css and node-js.
 
 ## Installation
 Install the necessary npm packages and node_modules
